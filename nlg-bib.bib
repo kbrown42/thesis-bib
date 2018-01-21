@@ -1,5 +1,4 @@
-% Encoding: UTF-8
-
+@comment{jabref-meta: databaseType:biblatex;}
 
 @article{dethlefs2015,
  __markedentry = {[kris:]},
@@ -57,7 +56,18 @@
 }
 
 @inproceedings{hu2017,
- annote = {/home/kris/code/thesis-bib/annotations/hu2017.txt: Test annotation},
+ annote = {The authors of this paper present an interesting and perhaps useful approach to remedy a core problem found in other methods of text generation through generative models such as GANs or VAEs.  The main problem is that the text generated from such models ends up being random, uncontrollable, and not very useful.  This paper's main finding is that independent disentangled latent representations of sentence semantics can be learned and used in the geneartion of text in addition to the entangled representation learned in the classic VAE model.
+//
+//
+It is generally expected that from an interpretability standpoint, each part of a learned representation of a dataset should control and focus on a single aspect of a sample.  For example, only one node in a network would look for sentiment, another would only look at verb tense.  However, past work has shown that this independent property is not preserved and can have unexpected outcomes in generating samples. To overcome this problem, the authors augment the standard latent representation of VAEs, $z$,  with a separate set of variables, $c$, that control semantic features (sentiment, tense).  The training procedure that the authors employ manages to maintain the independence of the two separate representations so that tweaking an element in $c$ does not change some other learned feature unexpectedly.  
+//
+//
+An interesting finding from the paper arises from the complication that there was no dataset that had labeled examples of both sentiment and tense.  It had previously been shown that discriminators trained on separate attributes can be combined and control a combined set of attributes.  Therefore, the authors were able to train on multiple datasets that suited their needs in terms of labeled data and combine the results into a combined model.  
+//
+//
+The authors demonstrated success in controlling the genertation of sentences.  They are able to effectively vary the sentiment (positive or negative) and the tense (past, present, or future).  The independency constraint proves to be more reliable in their examples than allowing the entangled representation $z$ to control the desired semantic structure.  As a further demonstration of effectiveness, they use their generated sentenced to augment a sentiment classification dataset.  They were able to show increased performance over other similar models.  They argue that their accurate generation of samples based on sentiment class allows them to make better classifiers.
+
+},
  author = {Hu, Zhiting and Yang, Zichao and Liang, Xiaodan and Salakhutdinov, Ruslan and Xing, Eric P},
  booktitle = {International Conference on Machine Learning},
  pages = {1587--1596},
@@ -108,9 +118,6 @@ The crux of the algorithm is the template ranking model which attempts to rank a
 \\
 \\
 Generation begins with again filtering out templates that have entity tags not present in the input data (Note: the data representation here is unclear but may be present in one of the cited references. Either way, it is something we will have to sort out ourselves).  Templates are scored and ranked using the model constructed from the SVM.  The top ranked template is chosen and the entities replaced with fields from the input data.  This is repeated until the number of sentences reaches the minimum found in the domain and continues until all the input data is placed in a template.  The max number of sentences is based off historical corpus statistics. The authors note that before generating the next sentence, the algorithm must decide whether to remove the already used entities from the data or to keep them for future sentence generation.  Keeping some entities for future sentences can be useful for clarification and coherence.  They state that their system has parameters to control this but do not elaborate further. 
-
-
-
 },
  author = {Kondadadi, Ravi and Howald, Blake and Schilder, Frank},
  booktitle = {Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
@@ -284,4 +291,3 @@ Generation begins with again filtering out templates that have entity tags not p
  year = {2017}
 }
 
-@Comment{jabref-meta: databaseType:biblatex;}
