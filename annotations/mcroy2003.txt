@@ -1,1 +1,0 @@
-/home/kris/code/thesis-bib/annotations/mcroy2003.txt: Test annotation

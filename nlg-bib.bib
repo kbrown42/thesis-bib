@@ -2,7 +2,7 @@
 
 @article{dethlefs2015,
  __markedentry = {[kris:]},
- annote = {/home/kris/code/thesis-bib/annotations/dethlefs2015.txt: Test annotation},
+ annote = {},
  author = {DETHLEFS, NINA and CUAYÁHUITL, HERIBERTO},
  doi = {10.1017/S1351324913000375},
  journal = {Natural Language Engineering},
@@ -15,7 +15,7 @@
 }
 
 @article{gatt2017,
- annote = {/home/kris/code/thesis-bib/annotations/gatt2017.txt: Test annotation},
+ annote = {},
  archiveprefix = {arXiv},
  author = {Albert Gatt and Emiel Krahmer},
  bibsource = {dblp computer science bibliography, http://dblp.org},
@@ -30,7 +30,7 @@
 }
 
 @article{goldstein2017,
- annote = {/home/kris/code/thesis-bib/annotations/goldstein2017.txt: Test annotation},
+ annote = {},
  author = {Goldstein, Ayelet and Shahar, Yuval and Orenbuch, Efrat and Cohen, Matan J},
  journal = {Artificial intelligence in medicine},
  pages = {20--33},
@@ -41,7 +41,7 @@
 }
 
 @article{guu2017,
- annote = {/home/kris/code/thesis-bib/annotations/guu2017.txt: Test annotation},
+ annote = {},
  archiveprefix = {arXiv},
  author = {Kelvin Guu and Tatsunori B. Hashimoto and Yonatan Oren and Percy Liang},
  bibsource = {dblp computer science bibliography, http://dblp.org},
@@ -59,15 +59,13 @@
  annote = {The authors of this paper present an interesting and perhaps useful approach to remedy a core problem found in other methods of text generation through generative models such as GANs or VAEs.  The main problem is that the text generated from such models ends up being random, uncontrollable, and not very useful.  This paper's main finding is that independent disentangled latent representations of sentence semantics can be learned and used in the generation of text in addition to the entangled representation learned in the classic VAE model.
 \\
 \\
-It is generally expected that from an interpretability standpoint, each part of a learned representation of a dataset should control and focus on a single aspect of a sample.  For example, only one node in a network would look for sentiment, another would only look at verb tense.  However, past work has shown that this independent property is not preserved and can have unexpected outcomes in generating samples. To overcome this problem, the authors augment the standard latent representation of VAEs, $z$,  with a separate set of variables, $c$, that control semantic features (sentiment, tense).  The training procedure that the authors employ manages to maintain the independence of the two separate representations so that tweaking an element in $c$ does not change some other learned feature unexpectedly.  
+It is generally expected that from an interpretability standpoint, each part of a learned representation of a dataset should control and focus on a single aspect of a sample.  For example, only one node in a network would look for sentiment, another would only look at verb tense.  However, past work has shown that this independent property is not preserved and can have unexpected outcomes in generating samples. To overcome this problem, the authors augment the standard latent representation of VAEs, $z$,  with a separate set of variables, $c$, that control semantic features (sentiment, tense).  The training procedure that the authors employ manages to maintain the independence of the two separate representations so that tweaking an element in $c$ does not change some other learned feature unexpectedly.
 \\
 \\
-An interesting finding from the paper arises from the complication that there was no dataset that had labeled examples of both sentiment and tense.  It had previously been shown that discriminators trained on separate attributes can be combined and control a combined set of attributes.  Therefore, the authors were able to train on multiple datasets that suited their needs in terms of labeled data and combine the results into a combined model.  
+An interesting finding from the paper arises from the complication that there was no dataset that had labeled examples of both sentiment and tense.  It had previously been shown that discriminators trained on separate attributes can be combined and control a combined set of attributes.  Therefore, the authors were able to train on multiple datasets that suited their needs in terms of labeled data and combine the results into a combined model.
 \\
 \\
-The authors demonstrated success in controlling the generation of sentences.  They are able to effectively vary the sentiment (positive or negative) and the tense (past, present, or future).  The independency constraint proves to be more reliable in their examples than allowing the entangled representation $z$ to control the desired semantic structure.  As a further demonstration of effectiveness, they use their generated sentenced to augment a sentiment classification dataset.  They were able to show increased performance over other similar models.  They argue that their accurate generation of samples based on sentiment class allows them to make better classifiers.
-
-},
+The authors demonstrated success in controlling the generation of sentences.  They are able to effectively vary the sentiment (positive or negative) and the tense (past, present, or future).  The independency constraint proves to be more reliable in their examples than allowing the entangled representation $z$ to control the desired semantic structure.  As a further demonstration of effectiveness, they use their generated sentenced to augment a sentiment classification dataset.  They were able to show increased performance over other similar models.  They argue that their accurate generation of samples based on sentiment class allows them to make better classifiers.},
  author = {Hu, Zhiting and Yang, Zichao and Liang, Xiaodan and Salakhutdinov, Ruslan and Xing, Eric P},
  booktitle = {International Conference on Machine Learning},
  pages = {1587--1596},
@@ -76,7 +74,7 @@ The authors demonstrated success in controlling the generation of sentences.  Th
 }
 
 @article{hueske-kraus2003,
- annote = {/home/kris/code/thesis-bib/annotations/hueske-kraus2003.txt: Test annotation},
+ annote = {},
  author = {Hueske-Kraus, Dirk},
  booktitle = {Methods of information in medicine},
  month = {02},
@@ -87,7 +85,7 @@ The authors demonstrated success in controlling the generation of sentences.  Th
 }
 
 @book{jurafsky2014,
- annote = {/home/kris/code/thesis-bib/annotations/jurafsky2014.txt: Test annotation},
+ annote = {},
  author = {Jurafsky, Dan and Martin, James H},
  publisher = {Pearson London},
  title = {Speech and language processing},
@@ -99,26 +97,25 @@ The authors demonstrated success in controlling the generation of sentences.  Th
  address = {Sofia, Bulgaria},
  annote = {Classic, or template based, NLG systems contain 3 components linked together in a pipeline.  Those stage  In this work, the authors have created a hybrid approach that combines the classic template based approach with statistical learning into a single step by extracting and ranking templates from a historical corpus focused on a single domain.  In this work the authors used data from weather and biography. Their results show that this hybrid approach can be used to generate well formed natural language with a high amount of syntactic variation provided there is sufficient historical data to learn from.  Moreover, by not relying on hand engineered rules-based document planning which is typical in classical approaches the development time needed to adapt the technique to new domains is significantly reduced from months to perhaps only days or weeks.
 \\
-\\ 
-The results show that this system creates acceptable documents in terms of fluency and understandability.  The system was evaluated using domain experts and non-domain experts as well as a metric the authors created based on syntactic variability.  They find that an overly high syntactic variability score can lead to overly complicated sentences.  In the conclusion, they claim that the majority of their time was spent creating entity taggers for the weather domain corpus.  This could be good news for us if there are as I suspect existing entity taggers for the medical domain.  If not, this is a great opportunity for a contribution on our part.  
+\\
+The results show that this system creates acceptable documents in terms of fluency and understandability.  The system was evaluated using domain experts and non-domain experts as well as a metric the authors created based on syntactic variability.  They find that an overly high syntactic variability score can lead to overly complicated sentences.  In the conclusion, they claim that the majority of their time was spent creating entity taggers for the weather domain corpus.  This could be good news for us if there are as I suspect existing entity taggers for the medical domain.  If not, this is a great opportunity for a contribution on our part.
 \\
 \\
-I think we should consider using this approach as a baseline for our note generation.  It seems effective, not overly complicated, and has pieces that we can swap out and experiment on.  For instance, sentence representation, template ranking and selection, etc.  The MIMIC-III dataset is a promising proving ground for this I believe.  
-From a high level, the hybrid NLG approach has four phases in document creation: preprocessing, conceptual unit creation, collecting statistics, and building the template ranking model.  
+I think we should consider using this approach as a baseline for our note generation.  It seems effective, not overly complicated, and has pieces that we can swap out and experiment on.  For instance, sentence representation, template ranking and selection, etc.  The MIMIC-III dataset is a promising proving ground for this I believe.
+From a high level, the hybrid NLG approach has four phases in document creation: preprocessing, conceptual unit creation, collecting statistics, and building the template ranking model.
 \\
 \\
 The preprocessing stage aims to uncover the underlying semantic structure of the corpus and then to use that structure as a way to create and rank sentence templates.  They begin by segmenting documents into sentences and representing them using Discourse Representation Structure which contains semantic predicates and named entity tags.  Semantic predicates include items such as EVENT, DATE, INSTITUTION, etc. The authors developed their own named-entity tagger for the weather domain.  (Note: we will have to develop entity tags for psych domain unless something else currently exists.)  (Note: the DRS representation of a sentence is unfamiliar to me at this point.  Effective sentence representation for this type of NLG system seems like a good research topic for us to explore). The preprocessing stage outputs a template bank and predicate information for each template in the corpus.
 \\
 \\
-The next stage is clustering templates into conceptual units.  The authors used a k-means clustering algorithm in which they used the semantic predicate information for each template to cluster them together.  
+The next stage is clustering templates into conceptual units.  The authors used a k-means clustering algorithm in which they used the semantic predicate information for each template to cluster them together.
 Corpus statistics are computed after clustering and these statistics are used in the final stage which is building the template ranking model.  The statistics collected are hand engineered (Note: another clear avenue for research is creating a template ranking algorithm that doesn’t rely on hand engineered features).
 \\
 \\
 The crux of the algorithm is the template ranking model which attempts to rank a set of templates for a given position in the document (sentence 1, sentence 2, …). Training data is extracted from a document in the training set.  The task is to learn the ranks of all templates for all clusters.  First, templates that have entity tags not present in the training data are removed.  Then, the top ten templates are chosen based on Levenshtein edit distance for each position.  That is to say, for the first sentence in the training document the top ten closest templates based on edit distance are chosen.  The same is repeated for each following sentence in the training document.  Another set of hand engineered features are generated for each template and are fed into a linear SVM for ranking.  The authors state that the cost is set to total queries.  The meaning of this is unclear in the paper.
 \\
 \\
-Generation begins with again filtering out templates that have entity tags not present in the input data (Note: the data representation here is unclear but may be present in one of the cited references. Either way, it is something we will have to sort out ourselves).  Templates are scored and ranked using the model constructed from the SVM.  The top ranked template is chosen and the entities replaced with fields from the input data.  This is repeated until the number of sentences reaches the minimum found in the domain and continues until all the input data is placed in a template.  The max number of sentences is based off historical corpus statistics. The authors note that before generating the next sentence, the algorithm must decide whether to remove the already used entities from the data or to keep them for future sentence generation.  Keeping some entities for future sentences can be useful for clarification and coherence.  They state that their system has parameters to control this but do not elaborate further. 
-},
+Generation begins with again filtering out templates that have entity tags not present in the input data (Note: the data representation here is unclear but may be present in one of the cited references. Either way, it is something we will have to sort out ourselves).  Templates are scored and ranked using the model constructed from the SVM.  The top ranked template is chosen and the entities replaced with fields from the input data.  This is repeated until the number of sentences reaches the minimum found in the domain and continues until all the input data is placed in a template.  The max number of sentences is based off historical corpus statistics. The authors note that before generating the next sentence, the algorithm must decide whether to remove the already used entities from the data or to keep them for future sentence generation.  Keeping some entities for future sentences can be useful for clarification and coherence.  They state that their system has parameters to control this but do not elaborate further.},
  author = {Kondadadi, Ravi and Howald, Blake and Schilder, Frank},
  booktitle = {Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
  link = {http://www.aclweb.org/anthology/P13-1138},
@@ -130,7 +127,7 @@ Generation begins with again filtering out templates that have entity tags not p
 }
 
 @article{lebret2016,
- annote = {/home/kris/code/thesis-bib/annotations/lebret2016.txt: Test annotation},
+ annote = {},
  archiveprefix = {arXiv},
  author = {R{\'{e}}mi Lebret and David Grangier and Michael Auli},
  bibsource = {dblp computer science bibliography, http://dblp.org},
@@ -147,7 +144,7 @@ Generation begins with again filtering out templates that have entity tags not p
 @article{mcroy2003,
  acmid = {973758},
  address = {New York, NY, USA},
- annote = {/home/kris/code/thesis-bib/annotations/mcroy2003.txt: Test annotation},
+ annote = {},
  author = {Mcroy, Susan W. and Channarukul, Songsak and Ali, Syed S.},
  doi = {10.1017/S1351324903003188},
  issn = {1351-3249},
@@ -165,7 +162,7 @@ Generation begins with again filtering out templates that have entity tags not p
 }
 
 @article{mei2015,
- annote = {/home/kris/code/thesis-bib/annotations/mei2015.txt: Test annotation},
+ annote = {},
  archiveprefix = {arXiv},
  author = {Hongyuan Mei and Mohit Bansal and Matthew R. Walter},
  bibsource = {dblp computer science bibliography, http://dblp.org},
@@ -181,7 +178,7 @@ Generation begins with again filtering out templates that have entity tags not p
 
 @article{mellish2004,
  __markedentry = {[kris:]},
- annote = {/home/kris/code/thesis-bib/annotations/mellish2004.txt: Test annotation},
+ annote = {},
  author = {MELLISH, CHRIS and EVANS, ROGER},
  doi = {10.1017/S1351324904003511},
  journal = {Natural Language Engineering},
@@ -195,7 +192,7 @@ Generation begins with again filtering out templates that have entity tags not p
 
 @article{mellish2006,
  __markedentry = {[kris:]},
- annote = {/home/kris/code/thesis-bib/annotations/mellish2006.txt: Test annotation},
+ annote = {},
  author = {MELLISH, CHRIS and SCOTT, DONIA and CAHILL, LYNNE and PAIVA, DANIEL and EVANS, ROGER and REAPE, MIKE},
  doi = {10.1017/S1351324906004104},
  journal = {Natural Language Engineering},
@@ -209,7 +206,7 @@ Generation begins with again filtering out templates that have entity tags not p
 
 @article{reiter1997,
  __markedentry = {[kris:]},
- annote = {/home/kris/code/thesis-bib/annotations/reiter1997.txt: Test annotation},
+ annote = {},
  author = {REITER, EHUD and DALE, ROBERT},
  journal = {Natural Language Engineering},
  number = {1},
@@ -222,7 +219,7 @@ Generation begins with again filtering out templates that have entity tags not p
 
 @book{reiter2000,
  address = {New York, NY, USA},
- annote = {/home/kris/code/thesis-bib/annotations/reiter2000.txt: Test annotation},
+ annote = {},
  author = {Reiter, Ehud and Dale, Robert},
  isbn = {0-521-62036-8},
  publisher = {Cambridge University Press},
@@ -231,7 +228,7 @@ Generation begins with again filtering out templates that have entity tags not p
 }
 
 @inproceedings{sutskever2011,
- annote = {/home/kris/code/thesis-bib/annotations/sutskever2011.txt: Test annotation},
+ annote = {},
  author = {Sutskever, Ilya and Martens, James and E. Hinton, Geoffrey},
  booktitle = {Proceedings of the 28th International Conference on Machine Learning (ICML-11)},
  month = {01},
@@ -243,7 +240,7 @@ Generation begins with again filtering out templates that have entity tags not p
 @article{vandeemter2005,
  acmid = {1122626},
  address = {Cambridge, MA, USA},
- annote = {/home/kris/code/thesis-bib/annotations/vandeemter2005.txt: Test annotation},
+ annote = {},
  author = {Van Deemter, Kees and Krahmer, Emiel and Theune, Mari\"{e}t},
  doi = {10.1162/0891201053630291},
  issn = {0891-2017},
@@ -262,7 +259,7 @@ Generation begins with again filtering out templates that have entity tags not p
 
 @article{varges2010,
  __markedentry = {[kris:]},
- annote = {/home/kris/code/thesis-bib/annotations/varges2010.txt: Test annotation},
+ annote = {},
  author = {VARGES, S. and MELLISH, C.},
  doi = {10.1017/S1351324910000069},
  file = {:annotations/varges2010.txt:Text},
@@ -277,7 +274,7 @@ Generation begins with again filtering out templates that have entity tags not p
 
 @article{xie2017,
  __markedentry = {[kris:6]},
- annote = {/home/kris/code/thesis-bib/annotations/xie2017.txt: Test annotation},
+ annote = {},
  archiveprefix = {arXiv},
  author = {Ziang Xie},
  bibsource = {dblp computer science bibliography, http://dblp.org},
